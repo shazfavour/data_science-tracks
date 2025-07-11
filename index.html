@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Homepage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background: #ADD8E6;
+            color: #000000;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            margin: 0 auto;
+            max-width: 800px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline-block;
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: #000000;
+            text-decoration: none;
+            padding: 10px;
+            display: block;
+            border-radius: 8px;
+            background: #FFFFFF;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        nav ul li a:hover {
+            background-color: #0056b3;
+            color: #ffffff;
+            transform: scale(1.05);
+        }
+        .collapsible-content {
+            display: none;
+            padding: 10px;
+            background: #f1f1f1;
+            border-radius: 8px;
+            margin-top: 5px;
+        }
+        .collapsible-header {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .collapsible-header i {
+            margin-left: 10px;
+        }
+        .collapsible-content p {
+            margin: 5px 0;
+        }
+        .open .collapsible-content {
+            display: block;
+        }
+        .open .collapsible-header i {
+            transform: rotate(180deg);
+        }
+        footer {
+            background: #ADD8E6;
+            color: #000000;
+            padding: 20px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .footer-content {
+            max-width: 800px;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        .footer-contact {
+            text-align: left;
+            flex: 1;
+        }
+        .footer-contact h2 {
+            margin-top: 0;
+        }
+        .footer-contact p {
+            margin: 5px 0;
+        }
+        .social-links {
+            display: flex;
+            align-items: center;
+            flex: 1;
+            justify-content: flex-end;
+        }
+        .social-links a {
+            color: #0000FF;
+            font-size: 24px;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        .social-links a:hover {
+            color: #7cb9e8;
+        }
+        footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+        .main-content {
+            text-align: center;
+            padding: 20px;
+        }
+        .section {
+            margin-bottom: 20px;
+            padding: 20px;
+            color: #000000;
+            border-radius: 8px;
+        }
+        .section h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        .section p {
+            font-size: 1em;
+            margin: 0;
+        }
+        .welcome-section {
+            background-color: #FFFFFF;
+        }
+        .services-section {
+            background-color: #90EE90;
+        }
+        .beliefs-section {
+            background-color: #FFFFFF;
+        }
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .image-item {
+            text-align: center;
+            width: 140px;
+        }
+        .image-item img {
+            width: 80%;
+            height: auto;
+            border-radius: 6px;
+        }
+        .image-item p {
+            margin-top: 3px;
+            font-size: 0.9em;
+        }
+        .scroll-button {
+            position: fixed;
+            width: 40px;
+            height: 40px;
+            border: none;
+            border-radius: 50%;
+            background: #FFFFFF;
+            color: #000000;
+            font-size: 20px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            transition: background 0.3s;
+        }
+        #scroll-up {
+            bottom: 20px;
+            right: 20px;
+        }
+        #scroll-down {
+            top: 20px;
+            right: 20px;
+        }
+        .scroll-button:hover {
+            background: #000000;
+            color: #FFFFFF;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Dawameds</h1>
+        <nav>
+            <ul>
+                <li class="collapsible">
+                    <div class="collapsible-header">Home<i class="fas fa-chevron-down"></i></div>
+                    <div class="collapsible-content">
+                        <a href="index.html">Home</a>
+                    </div>
+                </li>
+                <li class="collapsible">
+                    <div class="collapsible-header">About Us <i class="fas fa-chevron-down"></i></div>
+                    <div class="collapsible-content">
+                        <ul>
+                            <li><a href="about-us.html#mission-vision">Mission and Vision</a></li>
+                            <li><a href="about-us.html#management">Management</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="collapsible">
+                    <div class="collapsible-header">Speciality Clinic <i class="fas fa-chevron-down"></i></div>
+                    <div class="collapsible-content">
+                        <a href="speciality-clinic.html" target="_blank">Speciality Clinic</a>
+                    </div>
+                </li>
+                <li class="collapsible">
+                    <div class="collapsible-header">Services <i class="fas fa-chevron-down"></i></div>
+                    <div class="collapsible-content">
+                        <ul>
+                            <li><a href="service.html#inpatient-services" target="_blank">Inpatient Services</a></li>
+                            <li><a href="service.html#outpatient-services" target="_blank">Outpatient Services</a></li>
+                            <li><a href="service.html#consultancy-services" target="_blank">Consultancy Services</a></li>
+                            <li><a href="service.html#laboratory" target="_blank">Laboratory</a></li>
+                            <li><a href="service.html#pharmacy" target="_blank">Pharmacy</a></li>
+                            <li><a href="service.html#diagnostic-images" target="_blank">Diagnostic Images</a></li>
+                            <li><a href="service.html#casualty" target="_blank">Casualty</a></li>
+                            <li><a href="service.html#ambulance-services" target="_blank">Ambulance Services</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="section welcome-section">
+            <div class="main-content">
+                <h2>Welcome to Dawameds Hospital</h2>
+                <p>Dawameds is a private medical institution dedicated to providing excellent medical services. It is located in Bungoma town along Lusaka Road. We provide various multi-specialty inpatient and outpatient services in general medicine, surgery, diagnostics, emergency, and consultancy. The hospital features state-of-the-art medical facilities and equipment with highly experienced and qualified doctors and medical specialists in specific areas of specialization who work together to provide exceptional, compassionate, and affordable healthcare services while embracing integrity, ethics, and the dignity of human life, which is precious and granted by God.</p>
+            </div>
+        </div>
+
+        <div class="section services-section">
+            <div class="main-content">
+                <h2>What We Provide</h2>
+                <div class="image-gallery">
+                    <div class="image-item">
+                        <img src="images/mty.jfif" alt="Maternity">
+                        <p>Maternity</p>
+                    </div>
+                    <div class="image-item">
+                        <img src="images/lb.jfif" alt="Laboratory">
+                        <p>Laboratory</p>
+                    </div>
+                    <div class="image-item">
+                        <img src="images/p.png" alt="Pharmacy">
+                        <p>Pharmacy</p>
+                    </div>
+                    <div class="image-item">
+                        <img src="images/sg.jfif" alt="Surgery">
+                        <p>Surgery</p>
+                    </div>
+                    <div class="image-item">
+                        <img src="images/d.png" alt="Diagnosis">
+                        <p>Diagnosis</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section beliefs-section">
+            <div class="main-content">
+                <h2>Our Beliefs</h2>
+                <p>Our beliefs focus on delivering quality healthcare with:</p>
+                <ul>
+                    <li>Integrity</li>
+                    <li>Compassion</li>
+                    <li>Teamwork</li>
+                    <li>Community involvement</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-contact">
+                <h2>Contact Us</h2>
+                <p><strong>Phone:</strong> +254-123-456-789</p>
+                <p><strong>Email:</strong> info@dawameds.com</p>
+                <p><strong>Address:</strong> 123 Dawameds St., Bungoma</p>
+            </div>
+            <div class="social-links">
+                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+        <p>&copy; 2023 Dawameds Hospital. All rights reserved.</p>
+    </footer>
+
+    <button id="scroll-up" class="scroll-button" title="Scroll Up"><i class="fas fa-arrow-up"></i></button>
+    <button id="scroll-down" class="scroll-button" title="Scroll Down"><i class="fas fa-arrow-down"></i></button>
+
+    <script>
+        document.querySelectorAll('.collapsible-header').forEach(header => {
+            header.addEventListener('click', () => {
+                header.parentElement.classList.toggle('open');
+            });
+        });
+
+        const scrollUpButton = document.getElementById('scroll-up');
+        const scrollDownButton = document.getElementById('scroll-down');
+
+        scrollUpButton.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        scrollDownButton.addEventListener('click', () => {
+            window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>
